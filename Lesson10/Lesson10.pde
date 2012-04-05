@@ -24,7 +24,7 @@ void draw() {
   int[] b = new int[800];
 
   // calculate the next generation of cells
-  int[] rule = {0,1,1,0,1,0,0,0}; // the rule of cellular-automaton
+  int[] rule = {0,1,0,1,1,0,1,0}; // the rule of cellular-automaton
   for(int i=1; i<799; i++) {    
     if (rule [a[i-1]*4+a[i]*2+a[i+1]] == 1) {
       b[i] = 1;
