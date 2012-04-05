@@ -7,7 +7,7 @@ void setup() {
   t = 0;
   size(800, 600);
   smooth();
-  fill(0);
+  background(255);
 }
 
 float sig(float x) {
@@ -15,7 +15,11 @@ float sig(float x) {
 }
 
 void draw() {
-  background(255);
+  fill(255, 10);
+  noStroke();
+  rect(0,0,800,600);
+  
+  fill(0);
   float theta = TWO_PI*sig(-10+t/6);
   ellipse(400+200*sin(theta), 300-200*cos(theta), 100, 100);
   t = t+1;
